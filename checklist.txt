@@ -1,0 +1,46 @@
+[x] Back-end
+    [x] O usuário pode criar uma conta e fazer login
+    [x] O usuário pode ver e gerenciar apenas as transações e categorias criadas por ele
+    [x] Deve ser possível criar uma transação
+    [x] Deve ser possível deletar uma transação
+    [x] Deve ser possível editar uma transação
+    [x] Deve ser possível listar todas as transações
+    [x] Deve ser possível criar uma categoria
+    [x] Deve ser possível deletar uma categoria
+    [x] Deve ser possível editar uma categoria
+    [x] Deve ser possível listar todas as categorias
+    [x] O usuário pode trocar a foto de perfil
+    [x] TypeScript, GraphQL, Prisma e SQLite
+    [x] CORS e arquivo .env.example
+
+--------------------------------------------------------------------------------------------------------------------------
+
+[x] Front-end — funcionalidades
+    [x] O usuário pode criar uma conta e fazer login
+    [x] O usuário pode ver e gerenciar apenas as transações e categorias criadas por ele
+    [x] Deve ser possível criar uma transação
+    [x] Deve ser possível deletar uma transação
+    [x] Deve ser possível editar uma transação
+    [x] Deve ser possível listar todas as transações
+    [x] Deve ser possível criar uma categoria
+    [x] Deve ser possível deletar uma categoria
+    [x] Deve ser possível editar uma categoria
+    [x] Deve ser possível listar todas as categorias
+    [x] Aplicação React com TypeScript, GraphQL para consultas na API e Vite sem framework
+    [x] Seis telas e dois formulários em Dialog
+    [x] Arquivo .env.example
+    [x] Tema, fonte Inter e paleta baseados no Style Guide
+    [x] Layout de login, cadastro, dashboard, transações, categorias e perfil conforme o Figma
+    [x] Logotipo e ícones SVG do projeto
+    [x] Fidelidade visual das seis telas e dos dois modais em desktop e celular
+
+Validação
+    [x] Build TypeScript dos dois projetos
+    [x] ESLint
+    [x] 15 testes de integração GraphQL em SQLite temporário
+    [x] Cadastro, login, logout e persistência de sessão verificados no navegador
+    [x] Criação, edição e exclusão de categorias e transações verificadas no navegador
+    [x] Atualização de totais no dashboard e edição de nome no perfil verificadas no navegador
+    [x] Layout desktop (1280 x 800) e celular (390 x 844) verificados
+    [x] Auditoria npm sem vulnerabilidades conhecidas
+    [x] Envio, validação e remoção da foto de perfil na interface e na API
