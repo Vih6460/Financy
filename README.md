@@ -65,6 +65,6 @@ O layout segue o [Figma do projeto](https://www.figma.com/design/fXD68Q3hsIp9UPI
 
 Os modais de categoria e transação têm dimensões de **448 × 594** e **448 × 538** em desktop, respectivamente. O seletor de categoria oferece 16 ícones e sete cores. O logotipo e os ícones SVG ficam em `frontend/src/assets`. Os ícones usam máscaras CSS para aplicar as cores do tema e preservar as proporções; Lucide complementa os controles sem SVG correspondente.
 
-O perfil permite alterar e remover a foto. Datas e períodos usam seletores nativos, com o período apresentado em português. Novos lançamentos preenchem a data atual, e os dados e totais refletem a conta autenticada.
+O perfil permite alterar e remover a foto. Datas usam um calendário em português, com navegação entre meses e atalho para hoje. O período possui um seletor de meses em português, com navegação entre anos e atalhos para o mês atual ou todos os períodos. Novos lançamentos preenchem a data atual, e os dados e totais refletem a conta autenticada.
 
 A recuperação de senha não faz parte do escopo funcional.

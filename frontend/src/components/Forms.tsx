@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { DateSelect } from './DateSelect'
 import currency from '../assets/Icon/currency.svg'
 import { CircleArrowDown, CircleArrowUp } from './asset-icons'
 import { graphql } from '../lib/api'
@@ -41,7 +42,7 @@ export function TransactionForm({ item, categories, onClose }: { item?: Transact
   return <Modal title={item ? 'Editar transação' : 'Nova transação'} description="Registre sua despesa ou receita" onClose={onClose}><form className="form-stack transaction-form" onSubmit={submit}>
     <div className="type-picker" role="group" aria-label="Tipo de transação"><button type="button" className={type === 'EXPENSE' ? 'selected expense' : ''} aria-pressed={type === 'EXPENSE'} onClick={() => setType('EXPENSE')}><CircleArrowDown size={16} />Despesa</button><button type="button" className={type === 'INCOME' ? 'selected income' : ''} aria-pressed={type === 'INCOME'} onClick={() => setType('INCOME')}><CircleArrowUp size={16} />Receita</button></div>
     <Field label="Descrição" name="description" placeholder="Ex. Almoço no restaurante" defaultValue={item?.description} required maxLength={160} />
-    <div className="form-columns"><Field label="Data" name="date" type="date" defaultValue={item?.date ?? today()} required /><Field label="Valor" name="amount" placeholder="0,00" inputMode="decimal" icon={<img className="currency-prefix" src={currency} alt="" aria-hidden="true" />} defaultValue={item ? (item.amount / 100).toFixed(2).replace('.', ',') : undefined} required /></div>
+    <div className="form-columns"><DateSelect defaultValue={item?.date ?? today()} /><Field label="Valor" name="amount" placeholder="0,00" inputMode="decimal" icon={<img className="currency-prefix" src={currency} alt="" aria-hidden="true" />} defaultValue={item ? (item.amount / 100).toFixed(2).replace('.', ',') : undefined} required /></div>
     <label className="field"><span>Categoria</span><select aria-label="Categoria" name="categoryId" defaultValue={item?.category?.id ?? ''}><option value="">Selecione</option>{categories.map(category => <option key={category.id} value={category.id}>{category.name}</option>)}</select>{!categories.length && <small>Você pode criar categorias na página Categorias.</small>}</label>
     <ErrorMessage error={error || mutation.error} /><button className="button primary full" disabled={mutation.isPending}>{mutation.isPending ? 'Salvando...' : 'Salvar'}</button>
   </form></Modal>
